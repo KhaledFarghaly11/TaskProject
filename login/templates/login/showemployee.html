@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>Show Employee</title>
+{% endblock %}
+{% block content %}
+<div class="container">
+    <h1 class="mb-5">Show Employee</h1>
+    {% for x in employee %}
+    <h4 class="text-center">Employee name is: {{x.name}}</h4>
+    <h4 class="text-center">Employee id is: {{x.iD}}</h4>
+    <h4 class="text-center">Employee email is: {{x.email}}</h4>
+    <h4 class="text-center">Employee picture:</h4>
+    <img src="{{x.picture.url}}" class="text-center">
+    <h4 class="text-center" 3333>Employee salary is: {{x.salary}}</h4>
+    <hr>
+    {% endfor %}
+</div>
+{% endblock %}
